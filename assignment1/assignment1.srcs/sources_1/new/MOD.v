@@ -9,7 +9,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module SHL();
-
-
+module MOD #(parameter DATAWIDTH = 2)(a, b, rem);
+    input [DATAWIDTH-1:0] a, b;
+    output reg [DATAWIDTH-1:0] rem;
+    
+    always @(a, b) begin
+        rem <= a % b;
+    end
 endmodule
