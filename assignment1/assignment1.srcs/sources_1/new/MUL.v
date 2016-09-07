@@ -10,7 +10,11 @@
 
 
 
-module MUL(
-
-    );
+module MUL #(parameter DATAWIDTH = 2)(a, b, prod);
+    input [DATAWIDTH-1:0] a, b;
+    output reg [DATAWIDTH + DATAWIDTH-1:0] prod;
+    
+    always@(a, b)begin
+        prod <= a * b;
+    end
 endmodule

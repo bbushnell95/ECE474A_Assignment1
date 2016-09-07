@@ -8,13 +8,11 @@
 //  and 1 output (sum)
 //////////////////////////////////////////////////////////////////////////////////
 
-module ADD #(parameter DATAWIDTH = 2)(a, b, ci, co, sum);
+module ADD #(parameter DATAWIDTH = 2)(a, b, sum);
     input [DATAWIDTH-1:0] a, b;
     output reg [DATAWIDTH-1:0] sum;
     
-    reg [DATAWIDTH:0] cA, cB, cSUM;
-    
-    always@(a,b, ci)begin
+    always@(a,b)begin
         sum <= a + b;
     end
 endmodule
