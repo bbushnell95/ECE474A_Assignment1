@@ -3,6 +3,7 @@
 //Students: Brett Bushnell (Undergrad), Matt Dzurick (Grad)
 //Date Create: 9/1/2016
 //Assignment: 1
+//File: ADD.v
 //Description: This module is for the Adder datapath component. It has 2 inputs(a, b)
 //  and 1 output (sum)
 //////////////////////////////////////////////////////////////////////////////////
