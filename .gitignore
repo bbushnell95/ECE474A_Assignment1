@@ -1,5 +1,5 @@
 #Names: Brett Bushnell, Matt Dzurick
-#Description: Ignores files from veriolog for easy transfer during git hub exchanges
+#Description: Ignores files from verilog for easy transfer during git hub exchanges
 
 **/assignment1.cache/**
 **/assignment1.hw/**

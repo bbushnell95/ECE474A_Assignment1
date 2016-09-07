@@ -3,7 +3,7 @@
 //Students: Brett Bushnell (Undergrad), Matt Dzurick (Grad)
 //Date Create: 9/1/2016
 //Assignment: 1
-//File: REG.v
+//File: COMP.v
 //Description: This module is for the Register datapath components. It has 1 input(D)
 //  2 control inputs(Clk, Rst) and 1 output (q)
 //////////////////////////////////////////////////////////////////////////////////
