@@ -4,20 +4,21 @@
 //Date Create: 9/1/2016
 //Assignment: 1
 //File: COMP.v
-//Description: This module is for the Register datapath components. It has 1 input(D)
-//  2 control inputs(Clk, Rst) and 1 output (q)
+//Description: This module is for the Comparator datapath components. It has 2 inputs(a,b)
+//  and 3 control outputs (gt,lt,eq)
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module REG #(parameter DATAWIDTH = 2)(d, Clk, Rst, q);
-    input [DATAWIDTH-1:0] d;
-    input Clk, Rst;
-    output reg [DATAWIDTH-1:0] q;
+module COMP #(parameter DATAWIDTH = 2)(a, b, gt, lt, eq);
+    input [DATAWIDTH-1:0] a, b;
+    output reg gt, lt, eq;
     
-    always@(posedge Clk, Rst) begin
-        if(Rst == 1)
-            q <= 0;
+    always	@(a,b) begin
+        if (a > b)
+        
+        else if (a < b)
+        
         else
-            q <= d;
+        
     end
 endmodule
