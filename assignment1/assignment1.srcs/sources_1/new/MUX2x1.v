@@ -9,7 +9,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MUL2x1();
+module MUL2x1#(parameter DATAWIDTH = 2)(a, b, sel, d);
+    input a, b;
+    input sel;
+    output reg d;
 
-
+    always@(a, b, sel)begin
+        if(sel == 0)
+            d <= a;
+        else 
+            d <= b;
+    end
 endmodule
