@@ -1,6 +1,4 @@
-            d <= b;
-    end
-endmodule`timescale 1ns / 1ps
+`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 //Students: Brett Bushnell (Undergrad), Matt Dzurick (Grad)
 //Date Create: 9/1/2016
@@ -20,4 +18,6 @@ module MUL2x1#(parameter DATAWIDTH = 2)(a, b, sel, d);
         if(sel == 0)
             d <= a;
         else 
-
+            d <= b;
+    end
+endmodule

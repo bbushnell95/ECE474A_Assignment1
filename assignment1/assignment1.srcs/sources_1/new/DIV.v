@@ -9,7 +9,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module DIV();
-
-
+module DIV #(parameter DATAWIDTH = 2)(a, b, quot);
+    input [DATAWIDTH-1:0] a, b;
+    output reg [DATAWIDTH-1:0] quot;
+    
+    
+    always@(a,b)begin
+        quot <= a / b;
+    end
 endmodule
