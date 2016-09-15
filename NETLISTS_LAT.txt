@@ -1,0 +1,21 @@
+//////////////////////////////////////////////////////////////////////////////////
+//Students: Brett Bushnell (Undergrad), Matt Dzurick (Grad)
+//Date Create: 9/14/2016
+//Assignment: 1
+//File: NETLIST_LAT.txt
+//Description: File that shows the estimated critical path for behavioral netlists.
+//	In addition to the estimated critical path, it will also showcase the actual
+//	crictical path.
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+NetlistName	:	EstimatedCriticalPath	ActualCriticalPath
+circuit1	:	20.401					x			
+circuit2	:	39.061					x			
+circuit3	:	46.480					x
+circuit4	:	103.294					x
+circuit5	:	46.102					x
+circuit6	:	117.847					x
+circuit7	:	236.243					x
+circuit8	:							x
