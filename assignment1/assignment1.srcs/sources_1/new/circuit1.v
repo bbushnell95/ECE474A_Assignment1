@@ -1,22 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09/15/2016 01:12:31 PM
-// Design Name: 
-// Module Name: circuit1
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+//Students: Brett Bushnell (Undergrad), Matt Dzurick (Grad)
+//Date Create: 9/14/2016
+//Assignment: 1
+//File: circuit1.v
+//Description: Netlist Behavior circuit implementation for "circuit1"
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
