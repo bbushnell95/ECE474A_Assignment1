@@ -9,7 +9,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MUL2x1#(parameter DATAWIDTH = 2)(a, b, sel, d);
+module MUX2x1#(parameter DATAWIDTH = 2)(a, b, sel, d);
     input [DATAWIDTH-1:0] a, b;
     input [DATAWIDTH-1:0] sel;
     output reg [DATAWIDTH-1:0] d;
