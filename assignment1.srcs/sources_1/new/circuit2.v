@@ -17,7 +17,7 @@ module circuit2(a, b, c, x, z, Clk, Rst);
    	wire [31:0] d, e, f, g, h, xwire, zwire;
    	wire dLTe, dEQe;
    	
-   	wire na1, na2;
+   	wire na1;
   	
    	ADD #(32) ADD_ab(a, b, d);
   	ADD #(32) ADD_ac(a, c, e);
