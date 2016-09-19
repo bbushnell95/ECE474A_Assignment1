@@ -17,11 +17,10 @@ module circuit1(a, b, c, Clk, Rst, x, z);
     
     
     wire [7:0] d, e;
-    wire [15:0]f, g, xwire;
+    wire [15:0] f, g, xwire;
     
-    wire na1, na2;
-    
-    wire [15:0] d_16;
+    //Dummy wires for the lt and et of the Comp datapath component
+    wire na1, na2; 
     
     ADD #(8) ADD_ab(a, b, d);
     ADD #(8) ADD_ac(a, c, e);
