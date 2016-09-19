@@ -9,8 +9,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module circuit8(a, b, c, z, zero, Clk, Rst);
-	input [63:0] a, b, c, zero;
+module circuit8(a, c, z, zero, Clk, Rst);
+	input [63:0] a, c, zero;
 	input Clk, Rst;
   	output [63:0] z;
    	
@@ -19,11 +19,13 @@ module circuit8(a, b, c, z, zero, Clk, Rst);
    	
    	wire na1, na2;
   	
-  	SUB #(64) SUB_a1(a, 1, e);
-  	ADD #(64) ADD_c1(c, 1, f);
+  	//SUB #(64) SUB_a1(a, 1, e);
+  	//ADD #(64) ADD_c1(c, 1, f);
+  	DEC #(64) DEC_a(a, e);
+  	INC #(64) INC_c(c, f);
   	MOD #(64) MOD_ac(a, c, g);
   	COMP #(64) COMP_gzero(g, zero, na1, na2, gEQz);
-  	MUX2x1 #(64) MUX_eorf(e, f, dEQz, zwire);
+  	MUX2x1 #(64) MUX_eorf(e, f, gEQz, zwire);
   	REG #(64) REG_z(zwire, Clk, Rst, z);
   	
 endmodule

@@ -18,7 +18,7 @@ output [31:0] final;
 wire [31:0] t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14;
 
 //t1 = a + b
-    ADD #(8) ADD_ab(a, b, t1[7:0]);
+    ADD #(32) ADD_ab({24'b0,a}, {24'b0,b}, t1);
 //t2 = t1 + c
     ADD #(32) ADD_t1c(t1,{24'b0,c}, t2);
 //t3 = t2 + d

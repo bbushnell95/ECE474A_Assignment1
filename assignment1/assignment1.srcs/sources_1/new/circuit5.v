@@ -25,12 +25,16 @@ module circuit5(a, b, c, x, z, Clk, Rst);
   	SUB #(64) SUB_ab(a, b, f);
   	COMP #(64) COMP_deqe(d, e, na1, dLTe, dEQe);
   	MUX2x1 #(64) MUX_dore(d, e, dLTe, g);
-  	MUX2x1 #(64) MUX_gore(g, f, dEQe, h);
-  	REG #(64) REG_greg(g, Clk, Rst, greg);
-  	REG #(64) REG_hreg(h, Clk, Rst, hreg);
-  	SHL #(64) SHL_g(hreg, dLTe, xrin);
-  	SHR #(64) SHR_h(hreg, dEQe, zrin);
-  	REG #(32) REG_x(xrin[15:0], Clk, Rst, x);
-  	REG #(32) REG_z(zrin[15:0], Clk, Rst, z);
+  	MUX2x1 #(64) MUX_gorf(g, f, dEQe, h);
+  	//REG #(64) REG_greg(g, Clk, Rst, greg);
+  	always@(g, h)begin
+  	     greg <= g;
+  	     hreg <= h;
+  	end
+  	//REG #(64) REG_hreg(h, Clk, Rst, hreg);
+  	SHL #(64) SHL_g(hreg, {63'b0,dLTe}, xrin);
+  	SHR #(64) SHR_h(hreg, {63'b0,dEQe}, zrin);
+  	REG #(32) REG_x(xrin[31:0], Clk, Rst, x);
+  	REG #(32) REG_z(zrin[31:0], Clk, Rst, z);
 
 endmodule

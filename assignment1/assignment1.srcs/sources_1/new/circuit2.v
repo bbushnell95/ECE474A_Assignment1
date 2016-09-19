@@ -24,9 +24,9 @@ module circuit2(a, b, c, x, z, Clk, Rst);
   	SUB #(32) SUB_ab(a, b, f);
   	COMP #(32) COMP_deqe(d, e, na1, dLTe, dEQe);
   	MUX2x1 #(32) MUX_dore(d, e, dLTe, g);
-  	MUX2x1 #(32) MUX_gore(g, e, dEQe, h);
-  	SHL #(32) SHL_g(g, dLTe, xwire);
-  	SHR #(32) SHR_h(h, dEQe, zwire);
+  	MUX2x1 #(32) MUX_gorf(g, f, dEQe, h);
+  	SHL #(32) SHL_g(g, {31'b0,dLTe}, xwire);
+  	SHR #(32) SHR_h(h, {31'b0,dEQe}, zwire);
   	REG #(32) REG_x(xwire, Clk, Rst, x);
   	REG #(32) REG_z(zwire, Clk, Rst, z);
 
