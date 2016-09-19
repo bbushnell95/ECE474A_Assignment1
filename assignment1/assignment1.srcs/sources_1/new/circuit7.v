@@ -1,0 +1,15 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+//Students: Brett Bushnell (Undergrad), Matt Dzurick (Grad)
+//Date Create: 9/15/2016
+//Assignment: 1
+//File: circuit7.v
+//Description: Netlist Behavior circuit implementation for "circuit7"
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module circuit7();
+
+     
+endmodule
